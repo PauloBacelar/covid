@@ -1,0 +1,42 @@
+.nav {
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5em calc((100vw - 1200px) / 2);
+}
+
+.nav__main {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  margin: 0 24px;
+}
+
+.nav__logo {
+  height: 50px;
+}
+
+.nav__menu {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 0 24px;
+}
+
+.nav__list {
+  position: absolute;
+  right: 0;
+}
+
+.nav__list-item {
+  margin-right: 40px;
+  font-weight: 700;
+  transition: all 0.25s ease;
+}
+
+.nav__list-item:hover {
+  color: rgba(79, 250, 123, 0.8);
+  cursor: pointer;
+}
