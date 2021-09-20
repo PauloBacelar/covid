@@ -12,6 +12,12 @@ body {
   color: #e5e5e5;
 }
 
+body,
+html {
+  overflow-x: hidden;
+  position: relative;
+}
+
 ul {
   list-style-type: none;
 }
@@ -19,3 +25,11 @@ ul {
 li {
   display: inline-block;
 }
+
+header {
+  background-color: #1a1a1d;
+  padding: 0 calc((100vw - 1200px) / 2);
+  position: fixed;
+  width: 100vw;
+}
+
