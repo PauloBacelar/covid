@@ -1,4 +1,5 @@
 import Navbar from "./components/Navbar";
+import Section from "./components/Section";
 import { useEffect, useState } from "react";
 import data from "./api/api";
 
@@ -23,7 +24,7 @@ function App() {
         <Navbar />
       </header>
       <main>
-        
+        <Section title="Cases by country" />
       </main>
     </>
   );
