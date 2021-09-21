@@ -24,7 +24,7 @@ function App() {
         <Navbar />
       </header>
       <main>
-        <Section title="Cases by country" />
+        <Section title="Cases by country" data={timeline} flags={flags} />
       </main>
     </>
   );
