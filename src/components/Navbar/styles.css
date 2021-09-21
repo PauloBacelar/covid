@@ -45,6 +45,7 @@
 
 .nav__burger {
   display: none;
+  cursor: pointer;
 }
 
 @media (max-width: 750px) {
