@@ -4,12 +4,14 @@ import data from "./api/api";
 
 function App() {
   const [timeline, setTimeline] = useState([]);
+  const [flags, setFlags] = useState([]);
 
   useEffect(() => {
     const loadData = async () => {
       let timeline = await data.getCountriesTimeline();
       setTimeline(timeline);
-      console.log(timeline);
+
+      setFlags(data.getCountriesFlags());
     };
 
     loadData();
@@ -20,6 +22,9 @@ function App() {
       <header>
         <Navbar />
       </header>
+      <main>
+        
+      </main>
     </>
   );
 }
