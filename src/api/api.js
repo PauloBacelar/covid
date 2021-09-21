@@ -32,6 +32,13 @@ const data = {
       `covid-19/historical/${countries.join(",")}?lastdays=all`
     );
   },
+  getCountriesFlags: () => {
+    const flags = countries.map((country) => {
+      return `https://flagcdn.com/20x15/${country}.png`;
+    });
+
+    return flags;
+  },
 };
 
 export default data;
