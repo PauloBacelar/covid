@@ -37,3 +37,18 @@ main {
   padding: 0 calc((100vw - 1200px) / 2);
   margin: 0 24px;
 }
+
+::-webkit-scrollbar {
+  width: 9px;
+  background-color: #191a1c;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(161, 159, 173);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(161, 159, 173, 0.5);
+}
