@@ -1,3 +1,5 @@
 .section__grid-item {
   background-color: #191a1c;
+  height: 300px;
+  border-radius: 5px;
 }
