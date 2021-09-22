@@ -1,5 +1,6 @@
 const BASE_URL = "https://disease.sh/v3/";
 const countries = [
+  "ar",
   "au",
   "br",
   "ca",
