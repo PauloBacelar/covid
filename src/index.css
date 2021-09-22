@@ -39,7 +39,7 @@ main {
 }
 
 ::-webkit-scrollbar {
-  width: 9px;
+  width: 8px;
   background-color: #191a1c;
   border-radius: 8px;
 }
