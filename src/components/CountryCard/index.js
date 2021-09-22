@@ -1,7 +1,10 @@
-import "./CountryCard.css";
+import "./styles.css";
+import { useEffect } from "react";
 import React from "react";
 
-const CountryCard = ({ name, cases, deaths }) => {
+const CountryCard = ({ name, data }) => {
+  useEffect(() => {}, [data]);
+
   return (
     <div className="section__grid-item">
       <h3>{name}</h3>
