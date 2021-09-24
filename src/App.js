@@ -30,10 +30,18 @@ function App() {
       <main>
         <Section
           title="Cases by country"
-          data={timeline}
+          timeline={timeline}
           flags={flags}
           population={population}
           type="Cases"
+        />
+
+        <Section
+          title="Deaths by country"
+          timeline={timeline}
+          flags={flags}
+          population={population}
+          type="Deaths"
         />
       </main>
     </>

@@ -3,37 +3,38 @@ import { useState, useEffect } from "react";
 import CountriesGrid from "../CountriesGrid";
 import "./styles.css";
 
-const Section = ({ title, data, flags, population, type }) => {
-  const [casesData, setCasesData] = useState([]);
-  const [deathsData, setDeathsData] = useState([]);
+const Section = ({ title, timeline, flags, population, type }) => {
+  const [data, setData] = useState([]);
   const [countries, setCountries] = useState([]);
 
   useEffect(() => {
     const getData = () => {
-      const cases = [];
-      const deaths = [];
+      const data = [];
       const countries = [];
 
-      data.forEach((country) => {
-        cases.push(country.timeline.cases);
-        deaths.push(country.timeline.deaths);
+      timeline.forEach((country) => {
+        if (type.toLowerCase() === "cases") {
+          data.push(country.timeline.cases);
+        } else if (type.toLowerCase() === "deaths") {
+          data.push(country.timeline.deaths);
+        }
+
         countries.push(country.country);
       });
 
-      setCasesData(cases);
-      setDeathsData(deaths);
+      setData(data);
       setCountries(countries);
     };
 
     getData();
-  }, [data]);
+  }, [timeline]);
 
   return (
     <section className="section">
       <h2 className="section__title">{title}</h2>
 
       <CountriesGrid
-        data={casesData}
+        data={data}
         flags={flags}
         countries={countries}
         population={population}
