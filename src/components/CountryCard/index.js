@@ -14,7 +14,11 @@ const CountryCard = ({ name, data }) => {
     const getNewDaily = () => {
       const newDaily = [];
       Object.keys(data).forEach((day, i) => {
-        newDaily.push(data[days[i]] - data[day]);
+        if (data[days[i]] - data[day] >= 0) {
+          newDaily.push(data[days[i]] - data[day]);
+        } else {
+          newDaily.push(0);
+        }
       });
 
       setNewDaily(newDaily);
@@ -28,7 +32,7 @@ const CountryCard = ({ name, data }) => {
       <h3>{name}</h3>
 
       <div id="section__grid-chart">
-        <DataChart xLabels={days} yLabels={newDaily} />
+        <DataChart xLabels={days} yLabels={newDaily} name={name} />
       </div>
     </div>
   );

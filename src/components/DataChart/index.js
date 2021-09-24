@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { Line } from "react-chartjs-2";
 
-const DataChart = ({ xLabels, yLabels }) => {
+const DataChart = ({ xLabels, yLabels, name }) => {
   const [chartData, setChartData] = useState({});
 
   const createChart = () => {
@@ -10,7 +10,7 @@ const DataChart = ({ xLabels, yLabels }) => {
       labels: xLabels,
       datasets: [
         {
-          label: "Covid-19",
+          label: `Daily new cases in ${name}`,
           data: yLabels,
           backgroundColor: "#fff",
           fill: true,
