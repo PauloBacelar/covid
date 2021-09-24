@@ -14,9 +14,15 @@ const Navbar = () => {
       </div>
 
       <ul className={`nav__list ${showNav ? "nav__list-active" : ""}`}>
-        <li className="nav__list-item">Cases</li>
-        <li className="nav__list-item">Deaths</li>
-        <li className="nav__list-item">Vaccination</li>
+        <li className="nav__list-item">
+          <a href="#cases">Cases</a>
+        </li>
+        <li className="nav__list-item">
+          <a href="#deaths">Deaths</a>
+        </li>
+        <li className="nav__list-item">
+          <a href="#vaccination">Vaccination</a>
+        </li>
       </ul>
 
       <div

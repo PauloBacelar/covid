@@ -28,21 +28,25 @@ function App() {
         <Navbar />
       </header>
       <main>
-        <Section
-          title="Cases by country"
-          timeline={timeline}
-          flags={flags}
-          population={population}
-          type="Cases"
-        />
+        <div id="cases">
+          <Section
+            title="Cases by country"
+            timeline={timeline}
+            flags={flags}
+            population={population}
+            type="Cases"
+          />
+        </div>
 
-        <Section
-          title="Deaths by country"
-          timeline={timeline}
-          flags={flags}
-          population={population}
-          type="Deaths"
-        />
+        <div id="deaths">
+          <Section
+            title="Deaths by country"
+            timeline={timeline}
+            flags={flags}
+            population={population}
+            type="Deaths"
+          />
+        </div>
       </main>
     </>
   );
