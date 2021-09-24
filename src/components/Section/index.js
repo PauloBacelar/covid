@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import CountriesGrid from "../CountriesGrid";
 import "./styles.css";
 
-const Section = ({ title, data, flags, population }) => {
+const Section = ({ title, data, flags, population, type }) => {
   const [casesData, setCasesData] = useState([]);
   const [deathsData, setDeathsData] = useState([]);
   const [countries, setCountries] = useState([]);
@@ -37,6 +37,7 @@ const Section = ({ title, data, flags, population }) => {
         flags={flags}
         countries={countries}
         population={population}
+        type={type}
       />
     </section>
   );

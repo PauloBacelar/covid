@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { Line } from "react-chartjs-2";
 
-const DataChart = ({ xLabels, yLabels, name }) => {
+const DataChart = ({ xLabels, yLabels, name, type }) => {
   const [chartData, setChartData] = useState({});
 
   const createChart = () => {
@@ -10,7 +10,7 @@ const DataChart = ({ xLabels, yLabels, name }) => {
       labels: xLabels,
       datasets: [
         {
-          label: `Daily new cases in ${name}`,
+          label: `Daily new ${type.toLowerCase()} in ${name}`,
           data: yLabels,
           backgroundColor: "#fff",
           fill: true,

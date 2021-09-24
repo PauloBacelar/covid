@@ -33,6 +33,7 @@ function App() {
           data={timeline}
           flags={flags}
           population={population}
+          type="Cases"
         />
       </main>
     </>
