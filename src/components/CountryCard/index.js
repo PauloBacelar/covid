@@ -33,6 +33,11 @@ const CountryCard = ({ name, data, flag }) => {
         {name} <img src={flag} alt={`${name}'s flag`} />
       </h3>
 
+      <div className="section__grid-data">
+        <p>Total cases: {total.toLocaleString()}</p>
+        <p>Cases per 1M people: {total.toLocaleString()}</p>
+      </div>
+
       <div id="section__grid-chart">
         <DataChart xLabels={days} yLabels={newDaily} name={name} />
       </div>

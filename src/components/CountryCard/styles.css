@@ -9,6 +9,15 @@
   padding: 15px 15px;
 }
 
+.section__grid-data {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.section__grid-data p {
+  margin-top: 5px;
+}
+
 @media only screen and (max-width: 1024px) {
   .section__grid-item {
     width: 40vw;
