@@ -29,7 +29,7 @@ const DataChart = ({ xLabels, yLabels, name }) => {
   }, [xLabels, yLabels]);
 
   return (
-    <div id="chart" width="5" height="1">
+    <div id="chart">
       <Line data={chartData} />
     </div>
   );
