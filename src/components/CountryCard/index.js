@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import React from "react";
 import DataChart from "../DataChart";
 
-const CountryCard = ({ name, data, flag }) => {
+const CountryCard = ({ name, data, flag, population }) => {
   const [total] = useState(
     data[Object.keys(data)[Object.keys(data).length - 1]]
   );
@@ -27,6 +27,10 @@ const CountryCard = ({ name, data, flag }) => {
     getNewDaily();
   }, []);
 
+  const calculatePerMillion = (population, data) => {
+    return Math.round((population / data) * 1000000).toLocaleString();
+  };
+
   return (
     <div className="section__grid-item">
       <h3>
@@ -35,7 +39,7 @@ const CountryCard = ({ name, data, flag }) => {
 
       <div className="section__grid-data">
         <p>Total cases: {total.toLocaleString()}</p>
-        <p>Cases per 1M people: {total.toLocaleString()}</p>
+        <p>Cases per 1M people: {calculatePerMillion(total, population)}</p>
       </div>
 
       <div id="section__grid-chart">
