@@ -55,6 +55,4 @@ const data = {
   },
 };
 
-data.getPopulations();
-
 export default data;

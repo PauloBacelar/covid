@@ -2,7 +2,7 @@ import "./styles.css";
 import React from "react";
 import CountryCard from "../CountryCard";
 
-const CountriesGrid = ({ data, flags, countries }) => {
+const CountriesGrid = ({ data, flags, countries, population }) => {
   return (
     <div className="section__grid">
       {data.map((country, index) => {
@@ -11,6 +11,7 @@ const CountriesGrid = ({ data, flags, countries }) => {
             name={countries[index]}
             data={data[index]}
             flag={flags[index]}
+            population={population[index]}
             key={index}
           />
         );
