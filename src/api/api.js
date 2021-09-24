@@ -40,6 +40,21 @@ const data = {
 
     return flags;
   },
+  getPopulations: async () => {
+    const request = await fetch("https://restcountries.com/v2/all");
+    const json = await request.json();
+    const data = [];
+
+    json.forEach((country) => {
+      if (countries.includes(country.alpha2Code.toLowerCase())) {
+        data.push(country.population);
+      }
+    });
+
+    return data;
+  },
 };
+
+data.getPopulations();
 
 export default data;
