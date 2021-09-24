@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import React from "react";
 import DataChart from "../DataChart";
 
-const CountryCard = ({ name, data }) => {
+const CountryCard = ({ name, data, flag }) => {
   const [total] = useState(
     data[Object.keys(data)[Object.keys(data).length - 1]]
   );
@@ -29,7 +29,9 @@ const CountryCard = ({ name, data }) => {
 
   return (
     <div className="section__grid-item">
-      <h3>{name}</h3>
+      <h3>
+        {name} <img src={flag} alt={`${name}'s flag`} />
+      </h3>
 
       <div id="section__grid-chart">
         <DataChart xLabels={days} yLabels={newDaily} name={name} />

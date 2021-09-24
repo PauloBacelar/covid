@@ -7,7 +7,12 @@ const CountriesGrid = ({ data, flags, countries }) => {
     <div className="section__grid">
       {data.map((country, index) => {
         return (
-          <CountryCard name={countries[index]} data={data[index]} key={index} />
+          <CountryCard
+            name={countries[index]}
+            data={data[index]}
+            flag={flags[index]}
+            key={index}
+          />
         );
       })}
     </div>
