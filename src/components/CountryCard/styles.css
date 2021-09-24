@@ -7,6 +7,12 @@
   max-width: 340px;
   overflow: hidden;
   padding: 15px 15px;
+  transition: border 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.section__grid-item:hover {
+  border: 1px solid #6feb7a;
 }
 
 .section__grid-data {
