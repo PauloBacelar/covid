@@ -38,7 +38,7 @@ const CountryCard = ({ name, data, flag, population, type }) => {
 
   return (
     <div className="section__grid-item">
-      {population && (
+      {flag && (
         <>
           <h3>
             {name} <img src={flag} alt={`${name}'s flag`} />
@@ -69,7 +69,7 @@ const CountryCard = ({ name, data, flag, population, type }) => {
         </>
       )}
 
-      {!population && <Loader />}
+      {!flag && <Loader />}
     </div>
   );
 };

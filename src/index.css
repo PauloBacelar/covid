@@ -28,10 +28,10 @@ li {
 }
 
 header {
-  background-color: #1a1a1d;
   padding: 0 calc((100vw - 1200px) / 2);
   position: fixed;
   width: 100vw;
+  background-color: #191a1c;
 }
 
 main {
