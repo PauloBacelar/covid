@@ -1,70 +1,86 @@
-# Getting Started with Create React App
+<h4 align="center">
+  <img src="https://github.com/PauloBacelar/covid/blob/main/src/img/logo.svg" alt="logo" height="75"/>
+</h4>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1 align="center">
+    😷 Covid-19 Dashboard
+</h1>
 
-## Available Scripts
+<p align="center">Covid-19 timeline in the world</p>
 
-In the project directory, you can run:
+<p align="center">
+  <a href="#-features">Features</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-deploy">Deploy</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-prerequisites">Prerequisites</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-technologies">Techonologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-license">License</a>
+</p>
 
-### `npm start`
+<h3 align="center"> 
+🚧  Finished  🚧
+</h3>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### 📎 Features 
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- [x] Timeline of 30+ countries
+- [x] Cases timeline since Jan/2020
+- [x] Deaths timeline since Jan/2020
+- [x] Vaccination timeline since Dec/2021
+- [x] Charts for each country data
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 💻 Project
 
-### `npm run build`
+Covid-19 dashboard, using <a href="https://disease.sh">diseash.sh API</a>, <a href="https://flagcdn.com">Flag CDN</a> and <a href="https://restcountries.com">REST Countries API</a>.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 🚀 Deploy 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This project is hosted on [Netlify](https://covid19-paulobacelar.netlify.app/).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### ✅ Demo
+<img src="https://github.com/PauloBacelar/covid/blob/main/src/img/preview/desktop.png" />
 
-### `npm run eject`
+<div style="display: flex;">
+<img src="https://github.com/PauloBacelar/covid/blob/main/src/img/preview/mobile.png" width="200px" />
+<img src="https://github.com/PauloBacelar/covid/blob/main/src/img/preview/mobile-2.png" width="200px" />
+</div>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### ⚙ Prerequisites
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Before starting, you'll need to have [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/) or [Yarn](https://yarnpkg.com/).
+Also, an IDE is recommended for editing the code. I recommend [VSCode](https://code.visualstudio.com/).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### 📗 Running the application
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```bash
+# Clone this repository
+$ git clone https://github.com/PauloBacelar/covid
 
-## Learn More
+# Install the dependencies
+$ yarn or npm
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Run the application
+$ yarn or npm start
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 🚀 Technologies
 
-### Code Splitting
+This project uses the following technologies:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- HTML
+- CSS
+- Javascript
+- React.js
 
-### Analyzing the Bundle Size
+### 🧐 Sources
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<p>Covid-19 data: <a href="https://www.worldometers.info/coronavirus/">Worldometers</a></p>
+<p>Population numbers: <a href="https://restcountries.com/#sources">REST Countries</a></p>
 
-### Making a Progressive Web App
+### 📝 License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+This project is under MIT license.
 
-### Advanced Configuration
+<hr/>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Created by Paulo Bacelar.
