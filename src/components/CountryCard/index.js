@@ -2,6 +2,7 @@ import "./styles.css";
 import { useEffect, useState } from "react";
 import React from "react";
 import DataChart from "../DataChart";
+import Loader from "../Loader";
 
 const CountryCard = ({ name, data, flag, population, type }) => {
   const [total] = useState(
@@ -37,27 +38,38 @@ const CountryCard = ({ name, data, flag, population, type }) => {
 
   return (
     <div className="section__grid-item">
-      <h3>
-        {name} <img src={flag} alt={`${name}'s flag`} />
-      </h3>
+      {population && (
+        <>
+          <h3>
+            {name} <img src={flag} alt={`${name}'s flag`} />
+          </h3>
 
-      <div className="section__grid-data">
-        <p>
-          Total {type.toLowerCase()}: {total.toLocaleString()}
-        </p>
-        {type.toLowerCase() !== "doses" && (
-          <p>
-            {type} per 1M people: {calculatePerMillion(total, population)}
-          </p>
-        )}
-        {type.toLowerCase() === "doses" && (
-          <p>{calculatePerPerson(total, population)} doses per person</p>
-        )}
-      </div>
+          <div className="section__grid-data">
+            <p>
+              Total {type.toLowerCase()}: {total.toLocaleString()}
+            </p>
+            {type.toLowerCase() !== "doses" && (
+              <p>
+                {type} per 1M people: {calculatePerMillion(total, population)}
+              </p>
+            )}
+            {type.toLowerCase() === "doses" && (
+              <p>{calculatePerPerson(total, population)} doses per person</p>
+            )}
+          </div>
 
-      <div id="section__grid-chart">
-        <DataChart xLabels={days} yLabels={newDaily} name={name} type={type} />
-      </div>
+          <div id="section__grid-chart">
+            <DataChart
+              xLabels={days}
+              yLabels={newDaily}
+              name={name}
+              type={type}
+            />
+          </div>
+        </>
+      )}
+
+      {!population && <Loader />}
     </div>
   );
 };
