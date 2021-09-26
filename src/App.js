@@ -5,6 +5,7 @@ import data from "./api/api";
 
 function App() {
   const [timeline, setTimeline] = useState([]);
+  const [vaccination, setVaccination] = useState([]);
   const [flags, setFlags] = useState([]);
   const [population, setPopulation] = useState([]);
 
@@ -12,6 +13,9 @@ function App() {
     const loadData = async () => {
       let timeline = await data.getCountriesTimeline();
       setTimeline(timeline);
+
+      let vaccination = await data.getVaccinationData();
+      setVaccination(vaccination);
 
       let population = await data.getPopulations();
       setPopulation(population);
@@ -45,6 +49,16 @@ function App() {
             flags={flags}
             population={population}
             type="Deaths"
+          />
+        </div>
+
+        <div id="vaccination">
+          <Section
+            title="Vaccination by country"
+            timeline={vaccination}
+            flags={flags}
+            population={population}
+            type="Doses"
           />
         </div>
       </main>
