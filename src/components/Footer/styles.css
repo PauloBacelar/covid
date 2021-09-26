@@ -1,0 +1,9 @@
+.footer {
+  padding: 75px calc((100vw - 1200px) / 2);
+  margin: 0 24px;
+  overflow: hidden;
+}
+
+.footer__sources {
+  margin-bottom: 10px;
+}
