@@ -11,3 +11,7 @@
 .footer__link {
   text-decoration: underline;
 }
+
+.footer__link:hover {
+  color: rgba(255, 255, 255, 0.75);
+}
