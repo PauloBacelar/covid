@@ -20,6 +20,27 @@ const countries = [
   "gb",
   "us",
 ];
+const countriesFullName = [
+  "argentina",
+  "australia",
+  "brazil",
+  "canada",
+  "china",
+  "france",
+  "germany",
+  "india",
+  "indonesia",
+  "italy",
+  "japan",
+  "s. korea",
+  "mexico",
+  "russia",
+  "saudi arabia",
+  "south africa",
+  "turkey",
+  "uk",
+  "usa",
+];
 
 const fetchData = async (endpoint) => {
   const request = await fetch(`${BASE_URL}${endpoint}`);
@@ -53,6 +74,22 @@ const data = {
 
     return data;
   },
+  getVaccinationData: async () => {
+    const timeline = await fetchData(
+      `covid-19/vaccine/coverage/countries?lastdays=all`
+    );
+
+    const data = [];
+    timeline.forEach((country) => {
+      if (countriesFullName.includes(country.country.toLowerCase())) {
+        data.push(country);
+      }
+    });
+
+    return data;
+  },
 };
+
+data.getVaccinationData();
 
 export default data;
