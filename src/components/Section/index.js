@@ -17,6 +17,9 @@ const Section = ({ title, timeline, flags, population, type }) => {
           data.push(country.timeline.cases);
         } else if (type.toLowerCase() === "deaths") {
           data.push(country.timeline.deaths);
+        } else if (type.toLowerCase() === "doses") {
+          data.push(country.timeline);
+          console.log(data);
         }
 
         countries.push(country.country);
