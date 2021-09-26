@@ -4,6 +4,7 @@ import Section from "./components/Section";
 import { useEffect, useState } from "react";
 import data from "./api/api";
 import Loader from "react-loader-spinner";
+import Footer from "./components/Footer";
 
 function App() {
   const [timeline, setTimeline] = useState([]);
@@ -74,6 +75,7 @@ function App() {
           <Loader type="TailSpin" color="#6feb7a" height={100} width={100} />
         </main>
       )}
+      <Footer />
     </>
   );
 }
