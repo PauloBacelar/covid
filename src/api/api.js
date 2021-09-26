@@ -1,46 +1,38 @@
 const BASE_URL = "https://disease.sh/v3/";
-const countries = [
-  "ar",
-  "au",
-  "br",
-  "ca",
-  "cn",
-  "fr",
-  "de",
-  "in",
-  "id",
-  "it",
-  "jp",
-  "mx",
-  "ru",
-  "sa",
-  "za",
-  "kr",
-  "tr",
-  "gb",
-  "us",
-];
-const countriesFullName = [
-  "argentina",
-  "australia",
-  "brazil",
-  "canada",
-  "china",
-  "france",
-  "germany",
-  "india",
-  "indonesia",
-  "italy",
-  "japan",
-  "mexico",
-  "russia",
-  "saudi arabia",
-  "south africa",
-  "s. korea",
-  "turkey",
-  "uk",
-  "usa",
-];
+const countries = {
+  ar: "argentina",
+  au: "australia",
+  bd: "bangladesh",
+  br: "brazil",
+  ca: "canada",
+  cn: "china",
+  cd: "congo",
+  eg: "egypt",
+  et: "ethiopia",
+  fr: "france",
+  de: "germany",
+  in: "india",
+  id: "indonesia",
+  ir: "iran",
+  it: "italy",
+  jp: "japan",
+  mx: "mexico",
+  nl: "netherlands",
+  ng: "nigeria",
+  pk: "pakistan",
+  ph: "philippines",
+  ru: "russia",
+  sa: "saudi arabia",
+  za: "south africa",
+  kr: "s. korea",
+  es: "spain",
+  ch: "switzerland",
+  th: "thailand",
+  tr: "turkey",
+  gb: "uk",
+  us: "usa",
+  vn: "vietnam",
+};
 
 const fetchData = async (endpoint) => {
   const request = await fetch(`${BASE_URL}${endpoint}`);
@@ -51,11 +43,11 @@ const fetchData = async (endpoint) => {
 const data = {
   getCountriesTimeline: async () => {
     return await fetchData(
-      `covid-19/historical/${countries.join(",")}?lastdays=all`
+      `covid-19/historical/${Object.keys(countries).join(",")}?lastdays=all`
     );
   },
   getCountriesFlags: () => {
-    const flags = countries.map((country) => {
+    const flags = Object.keys(countries).map((country) => {
       return `https://flagcdn.com/20x15/${country}.png`;
     });
 
@@ -67,7 +59,7 @@ const data = {
     const data = [];
 
     json.forEach((country) => {
-      if (countries.includes(country.alpha2Code.toLowerCase())) {
+      if (Object.keys(countries).includes(country.alpha2Code.toLowerCase())) {
         data.push(country.population);
       }
     });
@@ -81,7 +73,7 @@ const data = {
 
     const data = [];
     timeline.forEach((country) => {
-      if (countriesFullName.includes(country.country.toLowerCase())) {
+      if (Object.values(countries).includes(country.country.toLowerCase())) {
         data.push(country);
       }
     });
@@ -89,7 +81,5 @@ const data = {
     return data;
   },
 };
-
-data.getVaccinationData();
 
 export default data;
