@@ -7,7 +7,7 @@ const CountryCard = ({ name, data, flag, population, type }) => {
   const [total] = useState(
     data[Object.keys(data)[Object.keys(data).length - 1]]
   );
-  const [days, setDays] = useState(Object.keys(data).slice(1));
+  const [days] = useState(Object.keys(data).slice(1));
   const [newDaily, setNewDaily] = useState([]);
 
   useEffect(() => {
@@ -31,6 +31,10 @@ const CountryCard = ({ name, data, flag, population, type }) => {
     return Math.round((population / data) * 1000000).toLocaleString();
   };
 
+  const calculatePerPerson = (population, data) => {
+    return (population / data).toLocaleString();
+  };
+
   return (
     <div className="section__grid-item">
       <h3>
@@ -41,9 +45,14 @@ const CountryCard = ({ name, data, flag, population, type }) => {
         <p>
           Total {type.toLowerCase()}: {total.toLocaleString()}
         </p>
-        <p>
-          {type} per 1M people: {calculatePerMillion(total, population)}
-        </p>
+        {type.toLowerCase() !== "doses" && (
+          <p>
+            {type} per 1M people: {calculatePerMillion(total, population)}
+          </p>
+        )}
+        {type.toLowerCase() === "doses" && (
+          <p>{calculatePerPerson(total, population)} doses per person</p>
+        )}
       </div>
 
       <div id="section__grid-chart">
