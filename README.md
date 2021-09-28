@@ -31,7 +31,8 @@
 
 ### 💻 Project
 
-Covid-19 dashboard, using <a href="https://disease.sh">diseash.sh API</a>, <a href="https://flagcdn.com">Flag CDN</a> and <a href="https://restcountries.com">REST Countries API</a>.
+Covid-19 dashboard, using <a href="https://disease.sh">diseash.sh API</a>, <a href="https://flagcdn.com">Flag CDN</a> and <a href="https://restcountries.com">REST Countries API</a>.<br/>
+There are totally 32 countries, 20 of them are from G20 (20 major economies) and 12 are countries ranked among the 20 most populated countries, but that are not in G20.
 
 ### 🚀 Deploy 
 
