@@ -12,9 +12,11 @@ const DataChart = ({ xLabels, yLabels, name, type }) => {
         {
           label: `Daily new ${type.toLowerCase()} in ${name}`,
           data: yLabels,
-          backgroundColor: "#fff",
+          backgroundColor: "rgba(111, 235, 122)",
           fill: true,
           pointRadius: 0,
+          borderColor: "#57EB63",
+          borderWidth: 0.25,
         },
       ],
       options: {
