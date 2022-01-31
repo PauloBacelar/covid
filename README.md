@@ -57,11 +57,14 @@ Also, an IDE is recommended for editing the code. I recommend [VSCode](https://c
 # Clone this repository
 $ git clone https://github.com/PauloBacelar/covid
 
+# Enter on covid folder
+$ cd covid
+
 # Install the dependencies
-$ yarn or npm
+$ npm install
 
 # Run the application
-$ yarn or npm start
+$ npm start
 ```
 
 ### 🚀 Technologies
